@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính</title>
+</head>
+
+<body>
+    <form>
+        <h1>Caculator</h1>
+        <input id="number1" type="text" name="number1" style="width: 200px;" />
+        <input id="number2" type="text" name="number2" style="width: 200px;" /> <br> <br>
+        <input type="button" name="Addition" value="Addition(+)" onclick="caculator('+')" />
+        <input type="button" name="Subtraction" value="Subtraction(-)" onclick="caculator('-') ;" />
+        <input type="button" name="Multiplication" value="Multiplication(X)" onclick="caculator('X');" />
+        <input type="button" name="Division" value="Division(/)" onclick="caculator('/');" />
+    </form>
+    <span id="result"></span>
+</body>
+<script>
+
+
+    function caculator(o) {
+        let result = 0;
+        let a = Number(document.getElementById('number1').value);
+        let b = Number(document.getElementById('number2').value);
+        if (o == "+") {
+            result = a + b;
+        } else if (o == "-") {
+            result = a - b;
+        } else if (o == "X") {
+            result = a * b;
+        } else if (o == "/") {
+            result = a / b;
+        }
+        document.getElementById('result').innerHTML = ` Result = ${result}`;
+    };
+
+
+
+</script>
+
+</html>

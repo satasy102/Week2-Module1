@@ -38,7 +38,7 @@
                 </td>
                 <td></td>
                 <td>
-                    <input id="convert" type="button" name="convert" value="Convert" onclick="doiTien() ; return
+                    <input type="button" name="convert" value="Convert" onclick="doiTien() ; return
                         result;" />
                 </td>
             </tr>
@@ -53,10 +53,10 @@
         let result = 0;
         let tien = document.getElementById('input').value;
         if (tien >= 0) {
-            if ((donvi_1 == "VietNam") && (donvi_2 == "USD")) {
+            if ((donvi_1 === "VietNam") && (donvi_2 === "USD")) {
                 result = tien / 23000;
             } else if ((donvi_1 == "VietNam") && (donvi_2 == "VietNam")) {
-                result = Number(document.getElementById('input').value) / 1;
+                result = tien / 1;
             } else if ((donvi_1 == "USD") && (donvi_2 == "VietNam")) {
                 result = tien * 23000;
             } else if ((donvi_1 == "USD") && (donvi_2 == "USD")) {
