@@ -19,46 +19,52 @@
     <form name="maytinh">
         <table border="1" cellpadding="1px" cellspacing="30px">
             <tr>
-                <td colspan="4"><input type="text" name="hienthi" style="text-align: right;" disabled></td>
+                <td colspan="4"><input type="text" id="hienthi" style="text-align: right;" disabled></td>
             </tr>
             <tr>
-                <td><input type="button" name="mot" value="1" onclick="maytinh.hienthi.value += 1" />
+                <td><input class="nut" type="button" name="mot" value="1" onclick="enterNumber('1')" />
                 </td>
-                <td><input type="button" name="hai" value="2" onclick="maytinh.hienthi.value += 2" />
+                <td><input class="nut" type="button" name="hai" value="2" onclick="enterNumber('2')" />
                 </td>
-                <td><input type="button" name="ba" value="3" onclick="maytinh.hienthi.value += 3" />
+                <td><input class="nut" type="button" name="ba" value="3" onclick="enterNumber('3')" />
                 </td>
-                <td><input type="button" name="cong" value="+" onclick="maytinh.hienthi.value += '+'" /></td>
-            </tr>
-            <tr>
-                <td><input type="button" name="bon" value="4" onclick="maytinh.hienthi.value += 4" /></td>
-                <td><input type="button" name="nam" value="5" onclick="maytinh.hienthi.value += 5" />
-                </td>
-                <td><input type="button" name="sau" value="6" onclick="maytinh.hienthi.value += 6" /></td>
-                <td><input type="button" name="tru" value="-" onclick="maytinh.hienthi.value += '-'" />
+                <td><input class="nut" type="button" name="cong" value="+" onclick="enterNumber('+')" />
                 </td>
             </tr>
             <tr>
-                <td><input type="button" name="bay" value="7" onclick="maytinh.hienthi.value += 7" /></td>
-                <td><input type="button" name="tam" value="8" onclick="maytinh.hienthi.value += 8" /></td>
-                <td><input type="button" name="chin" value="9" onclick="maytinh.hienthi.value += 9" />
+                <td><input class="nut" type="button" name="bon" value="4" onclick="enterNumber('4')" /></td>
+                <td><input class="nut" type="button" name="nam" value="5" onclick="enterNumber('5')" />
                 </td>
-                <td><input type="button" name="nhan" value="*" onclick="maytinh.hienthi.value += '*'" />
+                <td><input class="nut" type="button" name="sau" value="6" onclick="enterNumber('6')" /></td>
+                <td><input class="nut" type="button" name="tru" value="-" onclick="enterNumber('-')" />
                 </td>
             </tr>
             <tr>
-                <td><input type="button" name="clear" value="C" onclick="maytinh.hienthi.value = ''"></button></td>
-                <td><input type="button" name="khong" value="0" onclick="maytinh.hienthi.value += 0" />
+                <td><input class="nut" type="button" name="bay" value="7" onclick="enterNumber('7')" /></td>
+                <td><input class="nut" type="button" name="tam" value="8" onclick="enterNumber('8')" /></td>
+                <td><input class="nut" type="button" name="chin" value="9" onclick="enterNumber('9')" />
                 </td>
-                <td><input type="button" name="bang" value="="
-                        onclick="maytinh.hienthi.value = eval(maytinh.hienthi.value)" /></td>
-                <td><input type="button" name="chia" value="/" onclick="maytinh.hienthi.value += '/'" />
+                <td><input class="nut" type="button" name="nhan" value="*" onclick="enterNumber('*')" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" name="clear" value="C" onclick="hienthi.value = ''"></button></td>
+                <td><input class="nut" type="button" name="khong" value="0" onclick="enterNumber('0')" />
+                </td>
+                <td><input type="button" name="bang" value="=" onclick="hienthi.value = eval(hienthi.value)" /></td>
+                <td><input class="nut" type="button" name="chia" value="/" onclick="enterNumber('/')" />
                 </td>
             </tr>
         </table>
     </form>
 </body>
+<script>
+    // document.getElementsByClassName('nut').addEvenListener('click', enterNumber('1'));
 
+    function enterNumber(num) {
+        document.getElementById('hienthi').value += num;
+    }
+</script>
 
 
 
