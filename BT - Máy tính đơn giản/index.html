@@ -19,56 +19,49 @@
     <form name="maytinh">
         <table border="1" cellpadding="1px" cellspacing="30px">
             <tr>
-                <td id="hienthi" colspan="4"><input type="text" name="hienthi" style="text-align: right;" disabled></td>
+                <td colspan="4"><input type="text" name="hienthi" style="text-align: right;" disabled></td>
             </tr>
             <tr>
-                <td><input class="phimso" type="button" name="mot" value="1" onclick="maytinh.hienthi.value += 1" />
+                <td><input type="button" name="mot" value="1" onclick="maytinh.hienthi.value += 1" />
                 </td>
-                <td><input class="phimso" type="button" name="hai" value="2" onclick="maytinh.hienthi.value += 2" />
+                <td><input type="button" name="hai" value="2" onclick="maytinh.hienthi.value += 2" />
                 </td>
-                <td><input class="phimso" type="button" name="ba" value="3" onclick="maytinh.hienthi.value += 3" />
+                <td><input type="button" name="ba" value="3" onclick="maytinh.hienthi.value += 3" />
                 </td>
-                <td><input class="phimtinh" type="button" name="cong" value="+"
-                        onclick="maytinh.hienthi.value += '+'" /></td>
+                <td><input type="button" name="cong" value="+" onclick="maytinh.hienthi.value += '+'" /></td>
             </tr>
             <tr>
-                <td><input class="phimso" type="button" type="button" name="bon" value="4"
-                        onclick="maytinh.hienthi.value += 4" /></td>
-                <td><input class="phimso" type="button" type="button" name="nam" value="5"
-                        onclick="maytinh.hienthi.value += 5" /></td>
-                <td><input class="phimso" type="button" type="button" name="sau" value="6"
-                        onclick="maytinh.hienthi.value += 6" /></td>
-                <td><input class="phimtinh" type="button" type="button" name="tru" value="-"
-                        onclick="maytinh.hienthi.value += '-'" /></td>
+                <td><input type="button" name="bon" value="4" onclick="maytinh.hienthi.value += 4" /></td>
+                <td><input type="button" name="nam" value="5" onclick="maytinh.hienthi.value += 5" />
+                </td>
+                <td><input type="button" name="sau" value="6" onclick="maytinh.hienthi.value += 6" /></td>
+                <td><input type="button" name="tru" value="-" onclick="maytinh.hienthi.value += '-'" />
+                </td>
             </tr>
             <tr>
-                <td><input class="phimso" type="button" type="button" name="bay" value="7"
-                        onclick="maytinh.hienthi.value += 7" /></td>
-                <td><input class="phimso" type="button" type="button" name="tam" value="8"
-                        onclick="maytinh.hienthi.value += 8" /></td>
-                <td><input class="phimso" type="button" type="button" name="chin" value="9"
-                        onclick="maytinh.hienthi.value += 9" /></td>
-                <td><input class="phimtinh" type="button" type="button" name="nhan" value="*"
-                        onclick="maytinh.hienthi.value += '*'" /></td>
+                <td><input type="button" name="bay" value="7" onclick="maytinh.hienthi.value += 7" /></td>
+                <td><input type="button" name="tam" value="8" onclick="maytinh.hienthi.value += 8" /></td>
+                <td><input type="button" name="chin" value="9" onclick="maytinh.hienthi.value += 9" />
+                </td>
+                <td><input type="button" name="nhan" value="*" onclick="maytinh.hienthi.value += '*'" />
+                </td>
             </tr>
             <tr>
                 <td><input type="button" name="clear" value="C" onclick="maytinh.hienthi.value = ''"></button></td>
-                <td><input class="phimso" type="button" type="button" name="khong" value="0"
-                        onclick="maytinh.hienthi.value += 0" /></td>
-                <td><input id="phimbang" type="button" type="button" name="bang" value="="
+                <td><input type="button" name="khong" value="0" onclick="maytinh.hienthi.value += 0" />
+                </td>
+                <td><input type="button" name="bang" value="="
                         onclick="maytinh.hienthi.value = eval(maytinh.hienthi.value)" /></td>
-                <td><input class="phimtinh" type="button" type="button" name="chia" value="/"
-                        onclick="maytinh.hienthi.value += '/'" /></td>
+                <td><input type="button" name="chia" value="/" onclick="maytinh.hienthi.value += '/'" />
+                </td>
             </tr>
         </table>
     </form>
 </body>
-<script>
-    let phimso = document.getElementsByClassName('phimso');
-    let phimtinh = document.getElementsByClassName('phimtinh');
 
 
 
-</script>
+
+
 
 </html>
