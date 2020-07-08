@@ -9,10 +9,10 @@
 
 <body>
     <script>
-        let login = prompt('');
-
-        let massage = (login == 'Employee') ? 'Hello' : (login == 'Director') ? 'Greetings' : (login == "") ? 'No login' : ' ';
-        alert(massage);
+        let age = parseInt(prompt('Nhập tuổi: '));
+        if (age < 14) {
+            document.write('Bạn chưa đủ tuổi vào lớp 10');
+        }
     </script>
 </body>
 

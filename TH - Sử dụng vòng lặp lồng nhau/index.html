@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+
+<body>
+    <script>
+        let i = 1;
+        let j = 1;
+        let o = "<table border='1' width='200px' cellspacing='0'>"
+        /*for (i = 1; i <= 10; i++) {
+            o = o + "<tr>";
+            for (j = 1; j <= 10; j++) {
+                o = o + "<td>" + i * j + "</td>";
+            }
+            o = o + "</tr>";
+        }
+       
+        o = o + "</table>" 
+        document.write(o);*/
+        while (i <= 10) {
+            o = o + "<tr>";
+            while (j <= 10) {
+                o = o + "<td>" + i * j + "</td>";
+                j++;
+            }
+            o = o + "</tr>";
+            j = 1;
+            i++;
+        }
+
+        o = o + "</table>";
+        document.write(o);
+    </script>
+</body>
+
+</html>

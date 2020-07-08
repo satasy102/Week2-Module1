@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+</head>
+
+<body>
+    <h1>Do you love me?</h1>
+    <input id="co" type='button' name="yes" value="YES"></input>
+    <input id="no" type="button" name="no" value="NO" style="position: absolute; top: 80px; left: 150px;"></input>
+</body>
+<script>
+    document.getElementById('co').addEventListener('click', bieutuong);
+    document.getElementById('no').addEventListener('mouseover', duoibat);
+    function bieutuong() {
+        alert('<3');
+    }
+    function duoibat() {
+        let maxHeight = window.innerHeight;
+        let maxWidth = window.innerWidth;
+        let a = Math.random() * maxWidth - 5;
+        let b = Math.random() * maxHeight - 5;
+        document.getElementById('no').style.left = a + 'px';
+        document.getElementById('no').style.top = b + 'px';
+    }
+</script>
+
+</html>

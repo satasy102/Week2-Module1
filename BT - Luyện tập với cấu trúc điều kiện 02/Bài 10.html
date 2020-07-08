@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+</head>
+
+<body>
+    <script>
+        let kWh = +prompt('Nhập số kWh đã dùng: ');
+        let tiendien = 0;
+        if ((kWh >= 0) && (kWh <= 50)) {
+            tiendien = 1678 * kWh;
+        } else if ((kWh > 50) && (kWh <= 100)) {
+            tiendien = 1734 * (kWh - 50) + 1678 * 50;
+        } else if ((kWh > 100) && (kWh <= 200)) {
+            tiendien = 2014 * (kWh - 100) + 1734 * 50 + 1678 * 50;
+        } else if ((kWh > 200) && (kWh <= 300)) {
+            tiendien = 2536 * (kWh - 200) + 2014 * 100 + 1734 * 50 + 1678 * 50;
+        } else if ((kWh > 300) && (kWh <= 400)) {
+            tiendien = 2834 * (kWh - 300) + 2536 * 100 + 2014 * 100 + 1734 * 50 + 1678 * 50;
+        } else if (kWh > 400) {
+            tiendien = 2927 * (kWh - 400) + 2834 * 100 + 2536 * 100 + 2014 * 100 + 1734 * 50 + 1678 * 50;
+        }
+        alert('Tiền điện tháng này là: ' + tiendien);
+    </script>
+</body>
+
+</html>

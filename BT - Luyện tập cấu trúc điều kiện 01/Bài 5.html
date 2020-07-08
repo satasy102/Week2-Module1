@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+</head>
+
+<body>
+    <script>
+        let kiemtra = parseFloat(prompt('Nhập điểm kiểm tra: '));
+        let thigiuaky = parseFloat(prompt('Nhập điểm thi giữa kỳ: '));
+        let thicuoiky = parseFloat(prompt('Nhập điểm thi cuối kỳ: '));
+        let diemphay = (kiemtra + thigiuaky + thicuoiky * 2) / 4;
+        if (diemphay >= 8.0) {
+            alert(diemphay + ' Học sinh giỏi');
+        } else if ((diemphay >= 6.5) && (diemphay < 8)) {
+            alert(diemphay + ' Học sinh khá');
+        } else if ((diemphay >= 5.0) && (diemphay < 6.5)) {
+            alert(diemphay + ' Học sinh trung bình');
+        } else if (diemphay < 5) {
+            alert(diemphay + ' Học sinh yếu')
+        }
+    </script>
+</body>
+
+</html>

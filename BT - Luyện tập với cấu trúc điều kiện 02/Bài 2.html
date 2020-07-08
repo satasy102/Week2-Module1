@@ -9,10 +9,9 @@
 
 <body>
     <script>
-        let login = prompt('');
-
-        let massage = (login == 'Employee') ? 'Hello' : (login == 'Director') ? 'Greetings' : (login == "") ? 'No login' : ' ';
-        alert(massage);
+        let m = +prompt('Nhập chiều dài đơn vị mét: ');
+        let feet = m * 3.2808;
+        alert('Chiều dài Feet tương ứng là: ' + feet);
     </script>
 </body>
 

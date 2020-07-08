@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+
+<body>
+    <script> //Phương trình bậc 2: ax^2 + bx +c = 0
+        let a = +prompt('Phương trình bậc 2: ax^2 + bx +c = 0. Nhập a: ');
+        let b = +prompt('Phương trình bậc 2: ax^2 + bx +c = 0. Nhập b: ');
+        let c = +prompt('Phương trình bậc 2: ax^2 + bx +c = 0. Nhập c: ');
+        if (a != 0) {
+            if (b != 0) {
+                let delta = b * b - 4 * a * c;
+                if (delta >= 0) {
+                    let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.write('Phương trình có nguyệm x1= ' + x1 + '<br>');
+                    document.write('Phương trình có nguyệm x2= ' + x2);
+                } else alert("Phương trình vô nghiệm");
+            }
+
+
+        } else if (b != 0) {
+                    alert('Phương trình đã cho thành phương trình bậc 1 có nghiệm là x= ' + -c / b);
+                } else if (c == 0) {
+                            alert('Phương trình vô số nghiệm');
+                        } else alert('Phương trình vô nghiệm');
+
+
+
+    </script>
+</body>
+
+</html>

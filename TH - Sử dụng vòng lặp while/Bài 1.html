@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <p id="soA"></p>
+    <p id='ketqua'></p>
+</body>
+<script>
+    let a = +prompt('Nhập 1 số: ');
+    let S = 0;
+    while (a != -1) {
+        document.getElementById('soA').innerHTML += `${a} <br>`;
+        S += a;
+        a = +prompt('Nhập 1 số: ');
+
+    }
+    document.getElementById('ketqua').innerHTML = S;
+
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+</head>
+
+<body>
+    <script>
+        let TongThuNhap = +prompt('Tổng thu nhập: ');
+        let CacKhoanDuocMien = +prompt('Các khoản được miễn: ');
+        let CacKhoanGiamTru = +prompt('Các khoản giảm trừ: ');
+
+        let ThuNhapChiuThue = TongThuNhap - CacKhoanDuocMien;
+        let ThuNhapTinhThue = ThuNhapChiuThue - CacKhoanGiamTru;
+        let ThueSuat = 0;
+
+        if (ThuNhapTinhThue <= 60 * 10 ** 6) {
+            ThueSuat = 5 / 100;
+        } else if ((ThuNhapTinhThue > 60 * 10 *** 6) && (ThuNhapTinhThue <= 120 * 10 *** 6)) {
+            ThueSuat = 10 / 100;
+        } else if ((ThuNhapTinhThue > 120 * 10 *** 6) && (ThuNhapTinhThue <= 216 * 10 *** 6)) {
+            ThueSuat = 15 / 100;
+        } else if ((ThuNhapTinhThue > 216 * 10 *** 6) && (ThuNhapTinhThue <= 384 * 10 *** 6)) {
+            ThueSuat = 20 / 100;
+        } else if ((ThuNhapTinhThue > 384 * 10 *** 6) && (ThuNhapTinhThue <= 624 * 10 *** 6)) {
+            ThueSuat = 25 / 100;
+        } else if ((ThuNhapTinhThue > 624 * 10 *** 6) && (ThuNhapTinhThue <= 960 * 10 *** 6)) {
+            ThueSuat = 30 / 100;
+        } else if (ThuNhapTinhThue > 960 * 10 *** 6) {
+            ThueSuat = 35 / 100;
+        }
+        let ThueTNCN = ThuNhapTinhThue * ThueSuat;
+        alert('Thuế thu nhập cá nhân cần nộp là: ' + ThueTNCN);
+    </script>
+</body>
+
+</html>

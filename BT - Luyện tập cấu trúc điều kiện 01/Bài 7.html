@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+
+<body>
+    <script>
+        let phutgoi = parseFloat(prompt('Nhập số phút đã gọi: '));
+        let giacuoc = 0;
+        if (phutgoi < 100) {
+            giacuoc = phutgoi * 1500;
+        } else if ((phutgoi >= 100) && (phutgoi < 200)) {
+            giacuoc = phutgoi * 1200;
+        } else if (phutgoi >= 200) {
+            giacuoc = phutgoi * 900;
+        }
+        alert('Tiền cước tháng này bạn cần trả là: ' + giacuoc);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <script>
+        let soluong = parseInt(prompt('Nhập vào số lượng bán hàng: '));
+        let tienhoahong = 0;
+        const dongia = 500000;
+        if (soluong <= 10) {
+            tienhoahong = dongia * soluong * 5 / 100;
+        } else if ((soluong > 10) && (soluong <= 20)) {
+            tienhoahong = dongia * soluong * 10 / 100;
+        } else if (soluong > 20) {
+            tienhoahong = dongia * soluong * 20 / 100;
+        }
+        alert('số tiền hoa hồng bạn nhận được là: ' + tienhoahong);
+
+
+    </script>
+</body>
+
+</html>

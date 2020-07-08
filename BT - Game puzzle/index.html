@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game puzzle</title>
+</head>
+
+<body onload="start()">
+    <img id="one" src="./1_1.png" />
+    <img id="two" src="./2_2.png" />
+    <img id="three" src="./3_3.png" />
+</body>
+<script>
+    function changeimage1() {
+        let number = Math.floor(Math.random() * 3 + 1);
+        console.log(number);
+        switch (number) {
+            case 1:
+                document.getElementById('one').src = './3_1.png';
+                break;
+            case 2:
+                document.getElementById('one').src = './2_1.png';
+                break;
+            case 3:
+                document.getElementById('one').src = './1_1.png';
+                break;
+        }
+    }
+    function changeimage2() {
+        let number = Math.floor(Math.random() * 3 + 1);
+        console.log(number);
+        switch (number) {
+            case 1:
+                document.getElementById('two').src = './3_2.png';
+                break;
+            case 2:
+                document.getElementById('two').src = './2_2.png';
+                break;
+            case 3:
+                document.getElementById('two').src = './1_2.png';
+                break;
+        }
+    }
+    function changeimage3() {
+        let number = Math.floor(Math.random() * 3 + 1);
+        console.log(number);
+        switch (number) {
+            case 1:
+                document.getElementById('three').src = './3_3.png';
+                break;
+            case 2:
+                document.getElementById('three').src = './2_3.png';
+                break;
+            case 3:
+                document.getElementById('three').src = './1_3.png';
+                break;
+        }
+    }
+    function chay() {
+        document.getElementById('one').addEventListener('click', changeimage1);
+        document.getElementById('two').addEventListener('click', changeimage2);
+        document.getElementById('three').addEventListener('click', changeimage3);
+        let anh1 = document.getElementById('one').src;
+        let anh2 = document.getElementById('two').src;
+        let anh3 = document.getElementById('three').src;
+
+        if (((anh1 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/1_1.png') && (anh2 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/1_2.png') && (anh3 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/1_3.png'))
+            || ((anh1 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/2_1.png') && (anh2 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/2_2.png') && (anh3 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/2_3.png'))
+            || ((anh1 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/3_1.png') && (anh2 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/3_2.png') && (anh3 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/3_3.png'))) {
+            alert('Chuẩn');
+        };
+
+
+    }
+    function start() {
+        window.addEventListener('click', chay);
+    }
+
+
+
+</script>
+
+</html>

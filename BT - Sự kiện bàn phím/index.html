@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+
+<body onload="chay()">
+    <img id='image' src="./nobita.png" style="position:absolute;left:0; top:0;" height="100px" width="100px">
+    <script>
+        function phimlen() {
+            document.getElementById('image').style.top = parseInt(document.getElementById('image').style.top) - 10 + "px";
+        };
+        function phimxuong() {
+            document.getElementById('image').style.top = parseInt(document.getElementById('image').style.top) + 10 + "px";
+        };
+        function phimtrai() {
+            document.getElementById('image').style.left = parseInt(document.getElementById('image').style.left) - 10 + "px";
+        };
+        function phimphai() {
+            document.getElementById('image').style.left = parseInt(document.getElementById('image').style.left) + 10 + "px";
+        };
+        function phim(event) {
+
+            switch (event.keyCode) {
+                case 37:
+                    phimtrai();
+                    break;
+                case 39:
+                    phimphai();
+                    break;
+                case 38:
+                    phimlen();
+                    break;
+                case 40:
+                    phimxuong();
+                    break;
+            }
+        };
+        function chay() {
+            window.addEventListener('keydown', phim);
+        };
+
+    </script>
+
+</body>
+
+</html>
