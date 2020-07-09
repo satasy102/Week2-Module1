@@ -80,35 +80,41 @@
 
 <body>
     <label class="switch">
-        <input id="nut1" type="checkbox" onclick="run1()">
+        <input id="nut1" type="checkbox" onclick="run1(nut1, nut2, nut3)" />
         <span class="slider round"></span>
         <span class="text">GOOD</span>
     </label> <br> <br>
     <label class="switch">
-        <input id="nut2" type="checkbox" onclick="run2()">
+        <input id="nut2" type="checkbox" onclick="run2(nut1, nut2, nut3)" />
         <span class="slider round"></span>
         <span class="text">CHEAP</span>
     </label> <br> <br>
     <label class="switch">
-        <input id="nut3" type="checkbox" onclick="run3()">
+        <input id="nut3" type="checkbox" onclick="run3(nut1, nut2, nut3)" />
         <span class="slider round"></span>
         <span class="text">FAST</span>
     </label>
 </body>
 <script>
-    let nut1 = document.getElementById('nut1').checked;
-    let nut2 = document.getElementById('nut2').checked;
-    let nut3 = document.getElementById('nut2').checked;
-    function run1() {
-        document.getElementById('nut2').checked = false;
-    }
-    function run2() {
-        document.getElementById('nut3').checked = false;
-    }
-    function run3() {
-        document.getElementById('nut1').checked = false;
-    }
 
+    let nut1 = document.getElementById('nut1');
+    let nut2 = document.getElementById('nut2');
+    let nut3 = document.getElementById('nut3');
+    function run1(nut1, nut2, nut3) {
+        if ((nut1.checked && nut3.checked)) {
+            document.getElementById('nut2').checked = false;
+        }
+    }
+    function run2(nut1, nut2, nut3) {
+        if (nut1.checked && nut2.checked) {
+            document.getElementById('nut3').checked = false;
+        }
+    }
+    function run3(nut1, nut2, nut3) {
+        if (nut2 && nut3) {
+            document.getElementById('nut1').checked = false;
+        }
+    }
 </script>
 
 </html>
