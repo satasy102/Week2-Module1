@@ -65,6 +65,16 @@
         .slider.round:before {
             border-radius: 50%;
         }
+
+        .text {
+            position: absolute;
+            display: inline-block;
+            left: 65px;
+            margin-top: 7px;
+            color: blue;
+            font-weight: bolder;
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -72,14 +82,17 @@
     <label class="switch">
         <input id="nut1" type="checkbox" onclick="run1()">
         <span class="slider round"></span>
+        <span class="text">GOOD</span>
     </label> <br> <br>
     <label class="switch">
         <input id="nut2" type="checkbox" onclick="run2()">
         <span class="slider round"></span>
+        <span class="text">CHEAP</span>
     </label> <br> <br>
     <label class="switch">
         <input id="nut3" type="checkbox" onclick="run3()">
         <span class="slider round"></span>
+        <span class="text">FAST</span>
     </label>
 </body>
 <script>
