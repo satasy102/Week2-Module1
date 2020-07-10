@@ -15,7 +15,6 @@
 <script>
     function changeimage1() {
         let number = Math.floor(Math.random() * 3 + 1);
-        console.log(number);
         switch (number) {
             case 1:
                 document.getElementById('one').src = './3_1.png';
@@ -30,7 +29,6 @@
     }
     function changeimage2() {
         let number = Math.floor(Math.random() * 3 + 1);
-        console.log(number);
         switch (number) {
             case 1:
                 document.getElementById('two').src = './3_2.png';
@@ -45,7 +43,6 @@
     }
     function changeimage3() {
         let number = Math.floor(Math.random() * 3 + 1);
-        console.log(number);
         switch (number) {
             case 1:
                 document.getElementById('three').src = './3_3.png';
@@ -65,6 +62,7 @@
         let anh1 = document.getElementById('one').src;
         let anh2 = document.getElementById('two').src;
         let anh3 = document.getElementById('three').src;
+        console.log(anh1);
 
         if (((anh1 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/1_1.png') && (anh2 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/1_2.png') && (anh3 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/1_3.png'))
             || ((anh1 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/2_1.png') && (anh2 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/2_2.png') && (anh3 === 'http://127.0.0.1:5500/BT%20-%20Game%20puzzle/2_3.png'))

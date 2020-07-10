@@ -102,17 +102,17 @@
     let nut3 = document.getElementById('nut3');
     function run1(nut1, nut2, nut3) {
         if ((nut1.checked && nut3.checked)) {
-            document.getElementById('nut2').checked = false;
+            nut2.checked = false;
         }
     }
     function run2(nut1, nut2, nut3) {
         if (nut1.checked && nut2.checked) {
-            document.getElementById('nut3').checked = false;
+            nut3.checked = false;
         }
     }
     function run3(nut1, nut2, nut3) {
         if (nut2 && nut3) {
-            document.getElementById('nut1').checked = false;
+            nut1.checked = false;
         }
     }
 </script>
